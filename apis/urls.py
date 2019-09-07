@@ -1,8 +1,7 @@
-from django.urls import path
-from django.contrib import admin
-from . import views
-from . import serializers
+from django.conf.urls import url
+from apis.views import *
 
 urlpatterns = [
-    path('', views.holamundo)
+    #url(r'^users/$' UserList.as_view(), name = 'users'),
+    url('users/$', UserList.as_view(), name = 'user')
 ]
